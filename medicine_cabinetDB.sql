@@ -1,1 +1,2 @@
--- kat was here-- George was here
+-- kat was here
+-- George was here

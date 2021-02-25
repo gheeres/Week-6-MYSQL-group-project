@@ -1,2 +1,23 @@
--- kat was here
--- George was here
+CREATE DATABASE IF NOT EXISTS medicine_cabinet;
+USE medicine_cabinet;
+
+CREATE TABLE IF NOT EXISTS medicine (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  `usage` VARCHAR(255) 
+);
+
+CREATE TABLE IF NOT EXISTS user (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS regimen (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  medicineId INT NOT NULL,
+  userId INT NOT NULL,
+  dosage VARCHAR(255),
+  FOREIGN KEY (medicineId) REFERENCES medicine(id),
+  FOREIGN KEY (userId) REFERENCES user(id)
+);
+

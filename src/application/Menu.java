@@ -21,29 +21,29 @@ public class Menu {
 
 			try {
 				if (selection.equals("1")) {
-					// showUsers();
+					UserMenu.showUsers();
 				} else if (selection.equals("2")) {
-					// showMedicines();
+					MedicineMenu.showMedicines();
 				} else if (selection.equals("3")) {
-					// showUserRegimen();
+					RegimenMenu.showUserRegimen();
 				} else if (selection.equals("4")) {
-					// createUser();
+					UserMenu.createUser();
 				} else if (selection.equals("5")) {
-					// createMedicine();
+					MedicineMenu.createMedicine();
 				} else if (selection.equals("6")) {
-					// createRegimen();
+					RegimenMenu.createRegimen();
 				} else if (selection.equals("7")) {
-					// updateUser();
+					UserMenu.updateUser();
 				} else if (selection.equals("8")) {
-					// updateMedicine();
+					MedicineMenu.updateMedicine();
 				} else if (selection.equals("9")) {
-					// updateUserRegimen();
+					RegimenMenu.updateUserRegimen();
 				} else if (selection.equals("10")) {
-					// deleteUser();
+					UserMenu.deleteUser();
 				} else if (selection.equals("11")) {
-					// deleteMedicine();
+					MedicineMenu.deleteMedicine();
 				} else if (selection.equals("12")) {
-					// deleteRegimen();
+					RegimenMenu.deleteRegimen();
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

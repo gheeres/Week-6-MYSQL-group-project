@@ -6,12 +6,14 @@ public class Regimen {
 
 	private int regimenId;
 	private String dosage;
-	//private List<User> user;
-	//private List<Medicine> medicine;
+	private int userId;
+	private int medId;
 	//not sure if this is best way for these, as place holder.
 
-	public Regimen(int regimenId, String dosage) {
+	public Regimen(int regimenId, int medId, int userId, String dosage) {
 		this.setRegimenId(regimenId);
+		this.setMedId(medId);
+		this.setUserId(userId);
 		this.setDosage(dosage);
 	}
 
@@ -29,6 +31,22 @@ public class Regimen {
 
 	public void setDosage(String dosage) {
 		this.dosage = dosage;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public int getMedId() {
+		return medId;
+	}
+
+	public void setMedId(int medId) {
+		this.medId = medId;
 	}
 
 }

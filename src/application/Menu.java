@@ -45,7 +45,7 @@ public class Menu {
 				} else if (selection.equals("12")) {
 					RegimenMenu.deleteRegimen();
 				}
-			} catch (Exception e) {
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 

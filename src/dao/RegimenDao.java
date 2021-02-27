@@ -15,6 +15,7 @@ public class RegimenDao {
 	private Connection connection;
 	private final String GET_USER_REGIMEN_QUERY = "Select * from regimen where userid = ?";
 	private final String CREATE_NEW_REGIMEN_QUERY = "Insert into regimen (medicineId, userId, dosage) values (?, ?, ?)";
+	private final String UPDATE_REGIMEN_BY_ID_QUERY = "Update regimen Set medicineId = ?, userId = ?, dosage = ? where id = ?";
 	
 	public  RegimenDao() {
 		connection = DBConnection.getConnection();
@@ -40,6 +41,15 @@ public class RegimenDao {
 		ps.setInt(1,  medId);
 		ps.setInt(2, userId);
 		ps.setString(3, dosage);
+		ps.executeUpdate();
+	}
+	
+	public void updatedRegimenById(int medId, int userId, String dosage, int id) throws SQLException {
+		PreparedStatement ps = connection.prepareStatement(UPDATE_REGIMEN_BY_ID_QUERY);
+		ps.setInt(1, medId);
+		ps.setInt(2, userId);
+		ps.setString(3, dosage);
+		ps.setInt(4, id);
 		ps.executeUpdate();
 	}
 	

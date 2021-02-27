@@ -22,7 +22,7 @@ public class RegimenMenu {
 		 List<Regimen> regimen = regimenDao.getUserRegimen(id);
 	  
 		 for (Regimen med : regimen) {
-			 System.out.println(med.getMedId() + ": " + med.getMedId() + " " + med.getDosage());
+			 System.out.println(med.getRegimenId()+ ": " + med.getMedId() + " " + med.getDosage());
 		 }
 	 }
  
@@ -52,6 +52,10 @@ public class RegimenMenu {
 	  regimenDao.updatedRegimenById(medId, userId, dosage, id);
   }
 
-  public static void deleteRegimen() {
+  public static void deleteRegimen() throws SQLException {
+	  System.out.print("Enter regimen id ot delete: ");
+	  int id = Integer.parseInt(scanner.nextLine());
+	  
+	  regimenDao.deleteRegimenById(id);
   }
 }

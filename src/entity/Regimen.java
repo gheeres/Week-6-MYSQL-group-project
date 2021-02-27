@@ -8,13 +8,15 @@ public class Regimen {
 	private String dosage;
 	private int userId;
 	private int medId;
+	private String medName;
 	//not sure if this is best way for these, as place holder.
 
-	public Regimen(int regimenId, int medId, int userId, String dosage) {
+	public Regimen(int regimenId, int medId, int userId, String dosage, String medName) {
 		this.setRegimenId(regimenId);
 		this.setMedId(medId);
 		this.setUserId(userId);
 		this.setDosage(dosage);
+		this.setMedName(medName);
 	}
 
 	public int getRegimenId() {
@@ -47,6 +49,14 @@ public class Regimen {
 
 	public void setMedId(int medId) {
 		this.medId = medId;
+	}
+
+	public String getMedName() {
+		return medName;
+	}
+
+	public void setMedName(String medName) {
+		this.medName = medName;
 	}
 
 }

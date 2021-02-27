@@ -22,7 +22,7 @@ public class RegimenMenu {
 		 List<Regimen> regimen = regimenDao.getUserRegimen(id);
 	  
 		 for (Regimen med : regimen) {
-			 System.out.println(med.getRegimenId()+ ": " + med.getMedId() + " " + med.getDosage());
+			 System.out.println(med.getRegimenId()+ ": " + med.getMedName() + " " + med.getDosage());
 		 }
 	 }
  

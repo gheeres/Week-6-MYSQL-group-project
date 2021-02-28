@@ -11,12 +11,12 @@ public class UserMenu {
 	
 	private static Scanner scanner = new  Scanner(System.in);
 	
-	public void showUsers () throws SQLException {
-		List <User> users = UserDao.getUser();
-		for (User user :users ) {
-			System.out.println(user.getUserId() + ": "+ user.getUserName());
+	public static void showUsers () throws SQLException {
+		//List <User> users = UserDao.getUser();
+	//	for (User user :users ) {
+		//	System.out.println(user.getUserId() + ": "+ user.getUserName());
 		}
-	}
+	//}
 	  
 	  UserDao dao = new UserDao(); 
 		 

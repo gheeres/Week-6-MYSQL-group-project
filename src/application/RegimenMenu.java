@@ -1,19 +1,8 @@
 package application;
 
-<<<<<<< HEAD
+
 import java.util.Scanner;
 
-public class RegimenMenu {
-	
-	private Scanner scanner = new Scanner(System.in);
-	
-  public static void showUserRegimen() {
-	 
-  }
-  
-  public static void createRegimen() {
-  }
-=======
 
 import java.sql.SQLException;
 import java.util.List;
@@ -23,7 +12,6 @@ import dao.RegimenDao;
 import entity.Regimen;
 
 public class RegimenMenu {
-	
 	
 	private static Scanner scanner = new Scanner(System.in);
 	private static RegimenDao regimenDao = new RegimenDao();
@@ -52,7 +40,6 @@ public class RegimenMenu {
 		 regimenDao.createNewRegimen(medId, userId, dosage);
 		
 	 }
->>>>>>> f8595f132faf0de21b125a784396f8b1df05628d
 
   public static void updateUserRegimen() throws SQLException {
 	  System.out.print("Enter regimen ID to update: ");

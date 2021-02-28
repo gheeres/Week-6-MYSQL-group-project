@@ -24,7 +24,7 @@ public class Menu {
 
 			try {
 				if (selection.equals("1")) {
-					UserMenu.showUsers(); 			//showUsers
+				//	UserMenu.showUsers(); 			//showUsers
 				} else if (selection.equals("2")) {
 					MedicineMenu.showMedicines();	//showMedicine
 				} else if (selection.equals("3")) {

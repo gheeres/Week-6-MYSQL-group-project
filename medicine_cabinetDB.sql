@@ -20,4 +20,3 @@ CREATE TABLE IF NOT EXISTS regimen (
   FOREIGN KEY (medicineId) REFERENCES medicine(id),
   FOREIGN KEY (userId) REFERENCES user(id)
 );
-

@@ -15,18 +15,18 @@ public class MedicineMenu {
 	  	private int medicineId;
 		private String medicinename;
 		private List<Medicine> medicine;
-	
 	  
   }
 
   public static void updateMedicine() {
+	 
 	  this.medicineId = medicineId;
 	  this.medicinename = medicinename;
 	  this.medicine = medicine;
 	  
 	  }
 	 
-  }
+  
 
   public static void deleteMedicine() {
   }

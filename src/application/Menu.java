@@ -5,8 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class Menu {
+import dao.UserDao;
+import entity.User;
 
+public class Menu {
+	
 	private Scanner scanner = new Scanner(System.in);
 	private List<String> options = Arrays.asList("Show Users", "Show all Medicines", "Show a User Regimen",
 			"Create User", "Create Medicine", "Create Regimen", "Update User", "Update Medicine", "Update User Regimen",
@@ -21,29 +24,28 @@ public class Menu {
 
 			try {
 				if (selection.equals("1")) {
-					UserMenu.showUsers();
+					UserMenu.showUsers(); 			//showUsers
 				} else if (selection.equals("2")) {
-					MedicineMenu.showMedicines();
+					MedicineMenu.showMedicines();	//showMedicine
 				} else if (selection.equals("3")) {
-					RegimenMenu.showUserRegimen();
+					RegimenMenu.showUserRegimen();  // showUserRegimen
 				} else if (selection.equals("4")) {
-					UserMenu.createUser();
+					UserMenu.createUser();   		// show createUser
 				} else if (selection.equals("5")) {
-					MedicineMenu.createMedicine();
+					MedicineMenu.createMedicine();	// show CreateMedicine
 				} else if (selection.equals("6")) {
-					RegimenMenu.createRegimen();
-				} else if (selection.equals("7")) {
-					UserMenu.updateUser();
+					RegimenMenu.createRegimen();  // show CreateRegimen
+					UserMenu.updateUser();         // updateUser
 				} else if (selection.equals("8")) {
-					MedicineMenu.updateMedicine();
+					MedicineMenu.updateMedicine();		// updateMedicine
 				} else if (selection.equals("9")) {
-					RegimenMenu.updateUserRegimen();
+					RegimenMenu.updateUserRegimen();	//updateUserRegimen
 				} else if (selection.equals("10")) {
-					UserMenu.deleteUser();
+					UserMenu.deleteUser();				//DeleteUser
 				} else if (selection.equals("11")) {
-					MedicineMenu.deleteMedicine();
+					MedicineMenu.deleteMedicine();		//deleteMedcine
 				} else if (selection.equals("12")) {
-					RegimenMenu.deleteRegimen();
+					RegimenMenu.deleteRegimen();		//DeleteRegimen
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -61,5 +63,7 @@ public class Menu {
 			System.out.println(i + 1 + ") " + options.get(i));
 		}
 	}
+	
+	
 
 }
